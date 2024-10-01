@@ -44,11 +44,13 @@ function handleResetForm() {
 }
 function handleSubmit(e) {
   e.preventDefault();
-  let t = document.getElementById('nome').value,
-    n = document.getElementById('email').value,
-    a = document.getElementById('telefone').value;
-  renderResult(t, n, a);
+
+  let name = document.getElementById('nome').value,
+    email = document.getElementById('email').value,
+    phone = document.getElementById('telefone').value;
+  renderResult(name, email, phone);
 }
+
 (document.getElementById('year').innerHTML = new Date().getFullYear()),
   document.getElementById('telefone').addEventListener('input', function (e) {
     let t = e.target.value.replace(/\D/g, '');
