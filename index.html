@@ -2,26 +2,30 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Crie cartões de visita digitais preenchendo os campos na primeira página e visualize seu novo cartão de forma rápida e fácil.">
+    <meta name="keywords"
+      content="cartão de visita, digital, gratuito, gerador de cartão, Resultados Digitais">
+    <meta property="og:title" content="Gerador de Cartão de Visita" />
+    <meta property="og:description"
+      content="Crie grátis seu cartão de visita em passos rápidos!" />
+    <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="./assets/logo-favicon.svg">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-      name="description"
-      content="Conheça o fantástico Gerador de Cartão de Visita do Resultados Digitais! Crie cartões de visitas digitais preenchendo os campos na primeira página e visualize seu novo cartão de forma rápida e fácil.">
-    <meta property="og:title" content="Gerador de Cartão de Visita" />
-    <meta property="og:description"
-      content="Crie grátis seu cartão de visita em passos rápidos!" />
-    <meta property="og:image"
-      content="C:\Users\Thier\OneDrive\Área de Trabalho\RD_test\assets\landing-page.svg" />
-
+    <!-- Preload fonts -->
+    <link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      as="style">
     <link
       href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet">
 
-    <title>Resultados Digitais | HomePage </title>
+    <title>Gerador de Cartão de Visita - Resultados Digitais</title>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -31,97 +35,67 @@
 
   <body>
     <header id="header">
-      <img src="assets/logo.png" id="logo" alt="Logo - Resultados Digitais"
+      <img src="assets/logo.png" id="logo" alt="Logo Resultados Digitais"
         onClick="location.reload();" />
       <strong id="title">Gerador de Cartão de Visita</strong>
     </header>
 
     <main id="container">
-      <div id="welcome-title">
+      <section id="welcome-title">
         <h1>Gerador de Cartão de Visita</h1>
-        <p>
-          Crie grátis seu cartão de visita em passos rápidos! Você o insere no
-          Instagram e demais canais digitais.
-        </p>
-      </div>
-      <div id="hero">
-        <img
-          src="assets/landing-page.svg"
-          alt="Home - Resultados Digitais - Homem Criando Cartão"
-          loading="lazy" />
+        <p>Crie grátis seu cartão de visita em passos rápidos! Insira no
+          Instagram e canais digitais.</p>
+      </section>
 
+      <section id="hero">
+        <img src="assets/landing-page.svg"
+          alt="Homem criando cartão digital - Resultados Digitais"
+          loading="lazy" />
         <div id="forms-container">
           <form id="form" onsubmit="handleSubmit(event)">
             <div class="inputs">
               <div class="input-container">
                 <label for="nome">Nome*</label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="nome e sobrenome"
-                  required
-                  minlength="2"
-                  ">
+                <input type="text" id="nome" name="nome"
+                  placeholder="Nome e sobrenome" required minlength="2" />
               </div>
               <div class="input-container">
                 <label for="email">Email*</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="nome@email.com"
-                  required
+                <input type="email" id="email" name="email"
+                  placeholder="nome@email.com" required
                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                  autocomplete="off">
+                  autocomplete="email" />
               </div>
               <div class="input-container">
                 <label for="telefone">Telefone*</label>
-                <input
-                  type="tel"
-                  id="telefone"
-                  name="telefone"
+                <input type="tel" id="telefone" name="telefone"
                   placeholder="(00) 00000-0000"
-                  pattern="\(\d{2}\) \d{4,5}-\d{4}"
-                  required>
+                  pattern="\(\d{2}\) \d{4,5}-\d{4}" required />
               </div>
             </div>
+
             <div id="submit-info">
               <ul id="list-info">
-                <li>
-                  Ao preencher o formulário, concordo * em receber comunicações
-                  de
-                  acordo com meus interesses.
-                </li>
-                <li>
-                  Ao informar meus dados, eu concordo com a <a
+                <li>Ao preencher o formulário, concordo em receber comunicações
+                  de acordo com meus interesses.</li>
+                <li>Ao informar meus dados, concordo com a <a
                     href="https://legal.rdstation.com/pt/privacy-policy/"
-                    target="_blank">Política
-                    de
-                    Privacidade
-                  </a>.
-                </li>
-                <span>
-                  * Você pode alterar suas permissões de comunicação a qualquer
-                  tempo.
-                </span>
+                    target="_blank">Política de Privacidade</a>.</li>
+                <span>* Você pode alterar suas permissões de comunicação a
+                  qualquer tempo.</span>
               </ul>
             </div>
 
-            <button type="submit" class="button-primary">
-              GERAR CARTÃO GRÁTIS →
-            </button>
+            <button type="submit" class="button-primary">GERAR CARTÃO GRÁTIS
+              →</button>
           </form>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer id="footer">
-      <a
-        href="https://legal.rdstation.com/pt/privacy-policy/"
-        target="_blank">Política de
-        Privacidade
-      </a>
+      <a href="https://legal.rdstation.com/pt/privacy-policy/"
+        target="_blank">Política de Privacidade</a>
       <p>© <span id="year"></span> Resultados Digitais</p>
     </footer>
   </body>
