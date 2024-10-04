@@ -26,12 +26,16 @@ function renderResult(e, t, n) {
         </div>
       </div>
 
-      <button 
-        class="button-primary" 
-        disabled
-      >
-        ⬇  BAIXAR CART\xc3O 
-      </button>
+      <div class="button-container">
+        <button 
+          class="button-primary" 
+          disabled
+        >
+          ⬇  BAIXAR CART\xc3O 
+        </button>
+        <div class="trapezioinvertido-disabled" ></div>
+      </div>
+
       <a href="https://app.rdstation.com.br/signup" target="_blank">
         Fazer um teste gr\xe1tis do RD Station Marketing →
       </a>
